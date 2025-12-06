@@ -120,7 +120,7 @@
          .div-background {
             background: url('assets/img_ICME26/ICME26.png') no-repeat;
             background-size: cover;
-            background-position: center center; /* 从 65% 改回正中 */
+            background-position: center center;
         }
 
         .ICIP_logo{
@@ -131,6 +131,11 @@
         header.masthead .container {
             transform: translateY(-50px);  /* 往上挪 50 像素 */
         }
+
+        header.masthead {
+            margin-top: 75px;   /* 数值大概等于你的导航栏高度，自己微调，比如 60～80px */
+        }
+
                 
         #submit{
             background-color: gray; /*skyblue;*/
@@ -256,6 +261,15 @@
                 justify-content: center;
             }
         }
+        /* 超宽屏（比如 2K 显示器）时，让背景图缩小一点，尽量完整显示 */
+        @media (min-width: 1600px) {
+            .div-background {
+                background-size: contain;
+                background-position: center top;
+                background-color: #000000;
+            }
+        }
+
          /* Styling for the whole organizers section */
     #organizers {
         padding: 20px;
